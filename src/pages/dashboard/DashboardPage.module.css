@@ -1,0 +1,8 @@
+.sidebarWrapper {
+  width: 250px;
+  padding: 16px;
+  box-shadow: 0rem 1.25rem 1.6875rem 0rem rgba(0, 0, 0, 0.05);
+  background: linear-gradient(195deg, #42424a, #191919);
+height: 100vh;position: fixed;top: 0;
+border-radius: 12px;margin: 16px;
+}

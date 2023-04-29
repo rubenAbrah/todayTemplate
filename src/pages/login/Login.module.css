@@ -1,0 +1,10 @@
+.wrapper{
+    background-image: url('../../assets/img/backgrounds/loginPage.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loginformWrapper{
+    width: clamp(250px, 50%, 420px);
+}
