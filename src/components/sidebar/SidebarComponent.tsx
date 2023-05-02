@@ -1,7 +1,7 @@
-import styles from './SidebarComponent.module.css' 
+ 
 function SidebarComponent() {
   return (
-    <div className={[styles.sidebarWrapper, 'm15 p15 scrollbar bgWhite colorWhite sidebarHeight overflowXhidden fixed p20'].join(' ')}>
+    <div className='m15 br0375rem p15 width250 scrollbar sidebarBackground sidebarText sidebarHeight overflowXhidden fixed p20'>
       <div className="positionAbsolute clossButton topAndRight0"><span className='size32 py10'>&times;</span></div>
       <a href="/" className="flex my20 justifyCenter alignCenter">
         <img src="/src/assets/img/svg/logo.svg" />
@@ -28,11 +28,11 @@ function SidebarComponent() {
           </span>
         </div>
         <ul>
-          <li className={[styles.sidebarItem, 'active br0375rem p10 m5'].join(' ')}>
+          <li className='active br0375rem p10 m5'>
             <img src="" alt="" className="icon" />
             <span><a href="">dashboard</a></span>
           </li>
-          <li className={[styles.sidebarItem, 'br0375rem p10 m5'].join(' ')}>
+          <li className='br0375rem p10 m5'>
             <img src="" alt="" className="icon" />
             <span><a href="">dashboard</a></span>
           </li>

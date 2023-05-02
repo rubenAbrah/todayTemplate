@@ -1,4 +1,10 @@
- function HeaderComponent() {
+import {useEffect,useState} from 'react'
+function HeaderComponent() {
+    useEffect(() => {
+      console.log(321)
+      },[scrollY]);
+    
+    const [isFixed,setIsFixed] = useState('')
     return (
         <header className="width100 flex flexEnd m15 p30">
 <span>

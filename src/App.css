@@ -49,15 +49,11 @@ flex-direction: column;
 .mtminus30{
 margin-top: -30px;
 }
-.bgBlue{
-  background: linear-gradient(195deg, #49a3f1, #1A73E8);
-}
+ 
 .colorBlue{
   color:#1A73E8;
 }
-.bgWhite{
-  background-color: #ffffff;
-}
+ 
 .colorWhite{
   color: #ffffff;
 }
@@ -133,6 +129,9 @@ transform: scale(1.5);
 .width100{
   width: 100%;
 }
+.width250{
+  width: 250px;
+}
 .right0{
   right: 0;
 }
@@ -154,5 +153,5 @@ transform: scale(1.5);
   right: 0;
 }
 .active{
-background-image: var(--background)
+background: var(--title-background-global)
 }
