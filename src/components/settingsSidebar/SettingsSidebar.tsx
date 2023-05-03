@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 
-function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
+function SettingsSidebar({
+  showSettingsMenu,
+  setShowSettingsMenu,
+  setShowHeader,
+}) {
   function changeTitleBackgroundColor(e) {
     document.documentElement.style.setProperty(
       "--title-background-global",
@@ -19,7 +23,15 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
       );
       document.documentElement.style.setProperty(
         "--section-background-color",
-        getComputedStyle(document.body).getPropertyValue("--section-background-type1")
+        getComputedStyle(document.body).getPropertyValue(
+          "--section-background-type1"
+        )
+      );
+      document.documentElement.style.setProperty(
+        "--header-background-color-global",
+        getComputedStyle(document.body).getPropertyValue(
+          "--header-background-color-type1"
+        )
       );
     } else {
       document.documentElement.style.setProperty(
@@ -32,7 +44,15 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
       );
       document.documentElement.style.setProperty(
         "--section-background-color",
-        getComputedStyle(document.body).getPropertyValue("--section-background-type2")
+        getComputedStyle(document.body).getPropertyValue(
+          "--section-background-type2"
+        )
+      );
+      document.documentElement.style.setProperty(
+        "--header-background-color-global",
+        getComputedStyle(document.body).getPropertyValue(
+          "--header-background-color-global-type2"
+        )
       );
     }
   }
@@ -43,12 +63,27 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
         `--sidebar-background-color-${e.target.getAttribute("data-color")}`
       )
     );
+    document.documentElement.style.setProperty(
+      "--sidebar-text-color-global",
+      getComputedStyle(document.body).getPropertyValue(
+        `--sidebar-text-color-${e.target.getAttribute("data-color")}`
+      )
+    );
   }
 
   return (
-    <div className={`fixed overflowXhidden sidebarTextColor br075rem zind20 width340 right0 sidebarBackground sidebarHeight m15 p15 scrollbar sidebarText ${showSettingsMenu ?'':'mrMinus350px'}`}>
+    <div
+      className={`fixed overflowXhidden sidebarTextColor br075rem zind20 width340 right0 sidebarBackground sidebarHeight m15 p15 scrollbar sidebarText ${
+        showSettingsMenu ? "" : "mrMinus350px"
+      }`}
+    >
       <div className="positionAbsolute clossButton topAndRight0">
-        <span onClick={()=>setShowSettingsMenu(false)} className="size32 alignCenter justifyCenter width50height50 flex">&times;</span>
+        <span
+          onClick={() => setShowSettingsMenu(false)}
+          className="size32 alignCenter justifyCenter width50height50 flex"
+        >
+          &times;
+        </span>
       </div>
       <div className="">
         <h5>Настройки внешнего вида</h5>
@@ -99,7 +134,7 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
       <hr className="lightHr my10" />
       <div className="flex column">
         <h6>Тип меню</h6>
-        <ul className="flex sidebarText">
+        <ul className="flex whiteText">
           <li className="my10">
             <span
               data-color="type1"
@@ -132,7 +167,11 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
 
         <div className="flex between">
           <h6>прикрепить шапку сверху</h6>
-          <input type="checkbox" onChange={(e)=>setShowHeader(e.target.checked)} className="scale1_5 checkbox" />
+          <input
+            type="checkbox"
+            onChange={(e) => setShowHeader(e.target.checked)}
+            className="scale1_5 checkbox"
+          />
         </div>
         <hr className="lightHr my10" />
         <div className="flex between">

@@ -2,22 +2,21 @@ import { useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 function SidebarComponent({ showMenu, setShowMenu }) {
   const [showSubMenu, setShowSubMenu] = useState(true)
+ 
   if (!useMediaQuery()) {
     setShowMenu(true)
   }
+
   return (
 
-    <div className={`zind20 ${showMenu ? '' : "mlMinus280px"}   ${useMediaQuery() ? "positionAbsolute" : "sticky"}`}>
+    <div className={`zind20 ${useMediaQuery() ? '0' : 'ml280px' }   `}>
       <div
-        className={`m15 br0375rem sidebarTextColor relative width250 scrollbar sidebarBackground sidebarText sidebarHeight overflowXhidden  p20 
-        ${showMenu ? '' : "mlMinus280px"} `}
+        className={`m15 br0375rem sidebarTextColor relative width250 scrollbar sidebarBackground sidebarText sidebarHeight overflowXhidden  left0 p20 ${useMediaQuery() ? "positionAbsolute left0" : "fixed"} ${showMenu ? '' : "lMinus280px"}`}
       >
-        <div
-          className="clossButton topAndRight0 positionAbsolute"
-        >
-          <span
-            onClick={() => setShowMenu(false)} className="size32 alignCenter justifyCenter width50height50 flex">&times;</span>
-        </div>
+      { useMediaQuery() ?<div className="clossButton topAndRight0 right0 positionAbsolute">
+          <span onClick={() => setShowMenu(false)} className="size32 alignCenter justifyCenter width50height50 flex">&times;</span>
+        </div>:''}
+
         <a href="/" className="flex my20 justifyCenter alignCenter">
           <img src="/src/assets/img/svg/logo.svg" />
         </a>

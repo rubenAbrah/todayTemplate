@@ -11,19 +11,18 @@ function HeaderComponent({setShowMenu,showMenu,ShowSettingsMenu,setShowSettingsM
       window.removeEventListener("scroll", onScroll);
     };
   });
-
-  const [headerClasses, setHeaderClasses] = useState([]);
+ 
   const onScroll = (e) => {
-    if (showHeader && scrollY > 100 && !headerClasses.includes("fixed")) {
-      setIsFixed("fixed"); 
-    } else {
-      setIsFixed(""); 
-    }
+    if (showHeader &&  !isSticky.includes('sticky') ) {
+      setisSticky("sticky headerBacground top15"); 
+    }  if (!scrollY) {
+      setisSticky(""); 
+    } console.log(isSticky)
   };
 
-  const [isFixed, setIsFixed] = useState("");
+  const [isSticky, setisSticky] = useState("");
   return (
-    <header style={{background:'red'}} className={`zind15 widthwidthCalc br075rem m15 topAndRight0 ${isFixed}`}>
+    <header className={`zind15 width100 br075rem my10 right0 ${isSticky}`}>
       <div className="flex flexEnd p30 m15">
         <span>
           <img
