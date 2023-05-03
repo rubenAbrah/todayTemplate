@@ -17,6 +17,10 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
         "--text-color-global",
         getComputedStyle(document.body).getPropertyValue("--text-color-type1")
       );
+      document.documentElement.style.setProperty(
+        "--section-background-color",
+        getComputedStyle(document.body).getPropertyValue("--section-background-type1")
+      );
     } else {
       document.documentElement.style.setProperty(
         "--theme-body-global",
@@ -25,6 +29,10 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
       document.documentElement.style.setProperty(
         "--text-color-global",
         getComputedStyle(document.body).getPropertyValue("--text-color-type2")
+      );
+      document.documentElement.style.setProperty(
+        "--section-background-color",
+        getComputedStyle(document.body).getPropertyValue("--section-background-type2")
       );
     }
   }
@@ -38,7 +46,7 @@ function SettingsSidebar({showSettingsMenu,setShowSettingsMenu,setShowHeader}) {
   }
 
   return (
-    <div className={`fixed overflowXhidden sidebarTextColor br075rem width340 right0 sidebarBackground sidebarHeight m15 p15 scrollbar sidebarText ${showSettingsMenu ?'':'mrMinus350px'}`}>
+    <div className={`fixed overflowXhidden sidebarTextColor br075rem zind20 width340 right0 sidebarBackground sidebarHeight m15 p15 scrollbar sidebarText ${showSettingsMenu ?'':'mrMinus350px'}`}>
       <div className="positionAbsolute clossButton topAndRight0">
         <span onClick={()=>setShowSettingsMenu(false)} className="size32 alignCenter justifyCenter width50height50 flex">&times;</span>
       </div>

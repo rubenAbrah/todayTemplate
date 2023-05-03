@@ -29,7 +29,7 @@ function LoginPage() {
           styles.loginformWrapper,
         ].join(" ")}
       > 
-      <BigBlueTitle>Войти</BigBlueTitle>
+      <BigBlueTitle classnames="topminus80">Войти</BigBlueTitle>
         <input
           type="text"
           className="borderGrey my10 p15 br075rem"

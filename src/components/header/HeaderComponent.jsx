@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-
+import useMediaQuery from '../../hooks/useMediaQuery' 
 function HeaderComponent({setShowMenu,showMenu,ShowSettingsMenu,setShowSettingsMenu,showHeader}) {
-  useEffect(() => { 
+  
+  useEffect(() => {  
     function watchScroll() {
       window.addEventListener("scroll", onScroll);
     }
@@ -22,7 +23,7 @@ function HeaderComponent({setShowMenu,showMenu,ShowSettingsMenu,setShowSettingsM
 
   const [isFixed, setIsFixed] = useState("");
   return (
-    <header style={{background:'red'}} className={` widthwidthCalc br075rem m15 topAndRight0 ${isFixed}`}>
+    <header style={{background:'red'}} className={`zind15 widthwidthCalc br075rem m15 topAndRight0 ${isFixed}`}>
       <div className="flex flexEnd p30 m15">
         <span>
           <img
@@ -32,12 +33,12 @@ function HeaderComponent({setShowMenu,showMenu,ShowSettingsMenu,setShowSettingsM
           />
         </span>
         <span>
-          <img
+        { useMediaQuery()?  <img
           onClick={()=>setShowMenu(!showMenu)}
             className="size40  m5"
             src="/src/assets/img/icons/menu.svg"
             alt=""
-          />
+          /> : ''}
         </span>
         <span>
           <img

@@ -29,6 +29,14 @@
   margin-left: -10px;
   margin-right: -10px;
 }
+.sticky{
+  position: sticky;
+top: 15px;
+}
+
+.mx20{
+  margin:0 20px ;
+}
 .m5first {
   margin: 5px 5px 5px 0;
 }
@@ -128,6 +136,10 @@ height: 50px;
 }
 .topminus80 {
   top: -80px;
+} 
+.pt50mt70{
+padding-top: 50px;
+margin-top: 70px;
 }
 .width90 {
   width: 90%;
@@ -137,6 +149,12 @@ height: 50px;
 }
 .width340 {
   width: min(340px, calc(100vw - 30px));
+}
+.zind15{
+  z-index: 15;
+} 
+.zind20{
+  z-index: 50;
 }
 .positionAbsolute {
   position: absolute;
