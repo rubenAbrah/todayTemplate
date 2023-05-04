@@ -35,8 +35,8 @@
 .top15 {
   top: 15px;
 }
-.mx20 {
-  margin: 0 20px;
+.px20 {
+  padding: 0 20px;
 }
 .m5first {
   margin: 5px 5px 5px 0;
@@ -50,7 +50,7 @@
 .mtminus30 {
   margin-top: -30px;
 }
-.margin0{
+.margin0 {
   margin: 0;
 }
 .flexEnd {
@@ -88,7 +88,7 @@
 .relative {
   position: relative;
 }
-.sticky{
+.sticky {
   position: sticky;
 }
 .colorBlue {
@@ -129,7 +129,7 @@
   height: calc(100vh - 32px);
 }
 .overflowXhidden {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 .borderGrey {
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -156,11 +156,17 @@
 .width340 {
   width: min(340px, calc(100vw - 30px));
 }
+.zind10 {
+  z-index: 10;
+}
 .zind15 {
   z-index: 15;
 }
 .zind20 {
-  z-index: 50;
+  z-index: 20;
+}
+.zind25 {
+  z-index: 25;
 }
 .positionAbsolute {
   position: absolute;
@@ -196,6 +202,9 @@
   top: 0;
   right: 0;
 }
+.active a {
+  color: white;
+}
 .active {
   background: var(--title-background-global);
 }
@@ -203,4 +212,32 @@
   width: 350px;
   padding: 10px;
   border-radius: 5px;
+}
+.navHeader i,
+.header i {
+  margin: 10px 10px 0 10px;
+  font-size: 35px;
+  cursor: pointer;
+  font-family: FontAwesome;
+}
+.settings:before {
+  content: "\f013";
+}
+.notification:before {
+  content: "\f0f3";
+}
+.account:before {
+  content: "\f007";
+}
+.menu-active:before {
+  content: "\f039";
+}
+.menu-close:before {
+  content: "\f038";
+} 
+.subMenuOpen:before {
+  content: "\f107";
+}
+.subMenuClose:before {
+  content: "\f106";
 }
