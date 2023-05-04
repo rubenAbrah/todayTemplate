@@ -1,9 +1,9 @@
-import { BigBlueTitle } from "../title/BigBlueTitle"
+import { BigTitle } from "../title/BigTitle"
 
-function SectionComponent({children, classesHTML, titleText}){
+function SectionComponent({children, titleText}){
     return(
-        <section className={`section relative p30  pt50mt70 ${classesHTML}`}>
-        <BigBlueTitle classnames={"titlecenter p15"}>{titleText}</BigBlueTitle>
+        <section className={`section relative p30  pt50mt70 `}>
+        <BigTitle>{titleText}</BigTitle>
         <div className="dx-viewport">
           {children}
         </div>

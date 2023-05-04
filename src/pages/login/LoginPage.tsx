@@ -1,6 +1,6 @@
 import { SubmitButton } from "../../components/ui/button/SubmitButton";
 import { Checkbox } from "../../components/ui/checkbox/Checkbox"; 
-import { BigBlueTitle } from "../../components/ui/title/BigBlueTitle";
+import { BigTitle } from "../../components/ui/title/BigTitle";
 import styles from "./Login.module.css";
 function LoginPage() {
   return (
@@ -29,7 +29,7 @@ function LoginPage() {
           styles.loginformWrapper,
         ].join(" ")}
       > 
-      <BigBlueTitle classnames="topminus80">Войти</BigBlueTitle>
+      <BigTitle>Войти</BigTitle>
         <input
           type="text"
           className="borderGrey my10 p15 br075rem"
