@@ -220,8 +220,7 @@ h6 {
   color: rgb(255, 255, 255);
 }
 .contentWrapper {
-  max-width: 1700px;
-  margin: 0 auto;
+  max-width: 1700px; 
 }
 .accaunt::before { 
   content: "\f013";

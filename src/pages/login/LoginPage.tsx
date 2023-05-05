@@ -1,4 +1,4 @@
-import { SubmitButton } from "../../components/ui/button/SubmitButton";
+import { SubmitButton } from "../../components/ui/button/UiButton";
 import { Checkbox } from "../../components/ui/checkbox/Checkbox"; 
 import { BigTitle } from "../../components/ui/title/BigTitle";
 import styles from "./Login.module.css";
