@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 function MenuList() {
   const [showSubMenu, setShowSubMenu] = useState(true);
-  const location = useLocation();
-  useEffect(() => {
-    document.querySelectorAll(".menuList .menuListItem").forEach((elem) => {
-      if (location.pathname === elem.getAttribute("data-href")) {
-        elem.className += " active";
-      } else {
-        elem.classList.remove("active");
-      }
-    });
-  }, [location.pathname]);
+  // const location = useLocation();
+  // useEffect(() => {
+  //   document.querySelectorAll(".menuList .menuListItem").forEach((elem) => {
+  //     if (location.pathname === elem.getAttribute("data-href")) {
+  //       elem.className += " active";
+  //     } else {
+  //       elem.classList.remove("active");
+  //     }
+  //   });
+  // }, [location.pathname]);
 
   return (
     <div className="">
@@ -32,7 +32,7 @@ function MenuList() {
       {showSubMenu ? (
         <nav className="menuList">
           <ul>
-            <li className="flex">
+            {/* <li className="flex">
               <Link
                 data-href="/"
                 className="br0375rem p10 m5 width100 menuListItem"
@@ -58,7 +58,7 @@ function MenuList() {
               >
                 login
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       ) : (
