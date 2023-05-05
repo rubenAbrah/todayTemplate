@@ -34,7 +34,7 @@
   padding: 25px;
 }
 
-.mXauto { 
+.mXauto {
   margin: 0 auto;
 }
 
@@ -51,8 +51,8 @@
   top: 15px;
 }
 
-.px20 {
-  padding: 0 20px;
+.px15 {
+  padding: 0 15px;
 }
 
 .m5first {
@@ -83,12 +83,6 @@
   font-size: 32px;
   line-height: 32px;
 }
-
-.width50height50 {
-  width: 50px;
-  height: 50px;
-}
-
 .between {
   justify-content: space-between;
 }
@@ -256,7 +250,7 @@
   border-radius: 12px;
 }
 
-.topAndRight0 {
+.clossButton {
   top: 0;
   right: 0;
 }
@@ -276,13 +270,20 @@
 }
 
 .navHeader i,
-.header i {
+.header i,
+.sidebarBackground i {
   margin: 10px 10px 0 10px;
-  font-size: 35px;
   cursor: pointer;
   font-family: FontAwesome;
 }
 
+.sidebarBackground i {
+  font-size: 25px;
+}
+.navHeader i,
+.header i {
+  font-size: 35px;
+}
 .settings:before {
   content: "\f013";
 }
@@ -310,48 +311,6 @@
 .subMenuClose:before {
   content: "\f106";
 }
-
-
-
-
-
-
-
-
-
-
- 
-input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
-}
- 
-input.invalid {
-  background-color: #ffdddd;
-}
-
-.tab {
-  display: none;
-}
- 
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
- 
-.step.active {
-  opacity: 1;
-}
- 
-.step.finish {
-  background-color: #4CAF50;
+.close::before {
+  content: "\f00d";
 }

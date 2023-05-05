@@ -1,4 +1,5 @@
-import { SubmitButton } from "../../components/ui/button/UiButton";
+import SectionComponent from "../../components/ui/section/SectionComponent";
+import { UiButton } from "../../components/ui/button/UiButton";
 import { Checkbox } from "../../components/ui/checkbox/Checkbox"; 
 import { BigTitle } from "../../components/ui/title/BigTitle";
 import styles from "./Login.module.css";
@@ -15,7 +16,8 @@ function LoginPage() {
         "alignCenter",
       ].join(" ")}
     >
-      <form
+<SectionComponent titleText="Войти">
+<form
         action=""
         className={[
           "br075rem",
@@ -23,13 +25,12 @@ function LoginPage() {
           "pt75",
           "title",
           "bgWhite",
+          'width100',
           "flex",
           "column",
-          "loginformWrapper",
-          styles.loginformWrapper,
+          "loginformWrapper" 
         ].join(" ")}
-      > 
-      <BigTitle>Войти</BigTitle>
+      >  
         <input
           type="text"
           className="borderGrey my10 p15 br075rem"
@@ -45,7 +46,7 @@ function LoginPage() {
            <Checkbox>Запомнить</Checkbox>
          
         
-        <SubmitButton>Войти</SubmitButton>
+        <UiButton>Войти</UiButton>
         <span className="my5">
           Забыли пароль ?{" "}
           <a className="colorBlue" href="">
@@ -59,7 +60,11 @@ function LoginPage() {
           </a>
         </span> 
       </form>
-    </div>
+</SectionComponent>
+
+</div>
+  
+  
   );
 }
 export default LoginPage;

@@ -31,8 +31,7 @@
   background-color: var(--header-background-color-global);
   box-shadow: rgba(52, 71, 103, 0.9) 0rem 0rem 0.0625rem 0.0625rem inset,
     rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 0rem;
-  backdrop-filter: saturate(200%) blur(1.875rem);
-  /* background-color: rgba(26, 32, 53, 0.8); */
+  /* backdrop-filter: saturate(200%) blur(1.875rem);  */
 }
 .section {
   background: var(--section-background-color);
@@ -221,7 +220,7 @@ h6 {
 }
 .contentWrapper {
   max-width: 1700px; 
-}
-.accaunt::before { 
-  content: "\f013";
+} 
+.menuListItem.active{
+  color: #ffffff;
 }

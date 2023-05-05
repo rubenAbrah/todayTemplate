@@ -1,28 +1,27 @@
 import { useEffect } from "react";
-import { useChangeTeam } from "../../hooks/useChangeTeamColor";
+import {
+  useChangeSidebarBackgroundColor,
+  useChangeTeam,
+} from "../../hooks/useChangeTeamColor";
 import SidebarTitleColor from "./SidebarTitleColor";
 import SidebarBackgroundColor from "./SidebarBackgroundColor";
 function SettingsSidebar({
   showSettingsMenu,
   setShowSettingsMenu,
-  setShowHeader
+  setShowHeader,
 }) {
- 
- 
- 
-
   return (
     <div
       className={`fixed overflowXhidden sidebarTextColor br075rem zind25 width340 right0 sidebarBackground sidebarHeight m15 p15 scrollbar sidebarText ${
         showSettingsMenu ? "" : "mrMinus350px"
       }`}
     >
-      <div className="positionAbsolute clossButton topAndRight0">
+      <div className="positionAbsolute clossButton">
         <span
           onClick={() => setShowSettingsMenu(false)}
-          className="size32 alignCenter justifyCenter width50height50 flex"
+          className="alignCenter justifyCenter flex"
         >
-          &times;
+          <i className="close" aria-hidden="true"></i>
         </span>
       </div>
       <div className="">
@@ -31,34 +30,35 @@ function SettingsSidebar({
         <hr className="lightHr my10" />
       </div>
       <div className="">
-        <h6>Цвет фона текста</h6>
-        <SidebarTitleColor/>
+        <SidebarTitleColor title="Цвет фона текста" />
       </div>
       <hr className="lightHr my10" />
-      <div className="flex column"> 
-        <SidebarBackgroundColor/>
+      <div className="flex column">
+        <SidebarBackgroundColor
+          BackgroundTypesMenu={["темный", "светлый"]}
+          BackgroundTypesTitle="тип меню"
+          functionChangeColor={useChangeSidebarBackgroundColor}
+        />
         <hr className="lightHr my10" />
 
         <div className="flex between">
-          <h6>прикрепить шапку сверху</h6>
+          <label htmlFor="setShowHeader">
+            <h6>прикрепить шапку сверху</h6>
+          </label>
           <input
+            name="setShowHeader"
+            id="setShowHeader"
             type="checkbox"
             onChange={(e) => setShowHeader(e.target.checked)}
             className="scale1_5 checkbox"
           />
         </div>
         <hr className="lightHr my10" />
-        <div className="flex between">
-          <div className="">
-            <h6>тема</h6>
-            <span>светлый/темный</span>
-          </div>
-          <input
-            type="checkbox"
-            onChange={useChangeTeam}
-            className="scale1_5 checkbox"
-          />
-        </div>
+        <SidebarBackgroundColor
+          BackgroundTypesMenu={["светлый", "темный"]}
+          BackgroundTypesTitle="тема"
+          functionChangeColor={useChangeTeam}
+        />
         <hr className="lightHr my10" />
       </div>
     </div>

@@ -1,26 +1,21 @@
 import { useChangeSidebarBackgroundColor } from "../../hooks/useChangeTeamColor";
+import { BlackButton } from "../ui/button/UiButton";
 
-function SidebarBackgroundColor() {
-let arr = ["темный","белый"];
-const inner = [];
-for (let i = 0; i < arr.length; i++) {
-  inner.push(
-    <li key={i} className="my10 whiteText">
-      <span
-        data-color={`type${i + 1}`}
-        onClick={useChangeSidebarBackgroundColor}
-        className="m5first br0375rem borderGrey p15 bgDark borderGrey"
-      >
-        {arr[i]}
-      </span>
-    </li>
-  );
-} 
+function SidebarBackgroundColor({ BackgroundTypesMenu, BackgroundTypesTitle,functionChangeColor }) {
+  const listItems = BackgroundTypesMenu.map((type, i) => (
+    <BlackButton
+      data-color={`type${i + 1}`}
+      onClick={functionChangeColor}
+    >
+      {type}
+    </BlackButton>
+  ));
   return (
     <>
-      <h6>Тип меню</h6>
-      <ul className="flex">{inner}</ul>
+      <h6>{BackgroundTypesTitle}</h6>
+      <ul className="flex">{listItems}</ul>
     </>
   );
 }
+
 export default SidebarBackgroundColor;

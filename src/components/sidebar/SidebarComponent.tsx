@@ -15,12 +15,12 @@ function SidebarComponent({ showMenu, setShowMenu }) {
         } ${showMenu ? "" : "lMinus280px"}`}
       >
         {useMediaQuery() ? (
-          <div className="clossButton topAndRight0 right0 positionAbsolute">
+          <div className="clossButton positionAbsolute">
             <span
               onClick={() => setShowMenu(false)}
-              className="size32 alignCenter justifyCenter width50height50 flex"
+              className="alignCenter justifyCenter flex"
             >
-              &times;
+            <i className="close" aria-hidden="true"></i>
             </span>
           </div>
         ) : (
