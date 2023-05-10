@@ -1,17 +1,17 @@
 import SettingsSidebar from "./settingsSidebar/SettingsSidebar";
 import SidebarComponent from "./sidebar/SidebarComponent";
 import HeaderComponent from "./header/HeaderComponent";
-import { useEffect, useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import "devextreme-react/text-area";
-function Layout({children}) {
+function Layout() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSettingsMenu, setShowSettingsMenu] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
-  // const location = useLocation(); 
+
   return (
-    <>
-      {/* {location.pathname !== "/login" ? ( */}
+    <> 
+      {location.pathname !== "/login" ? (
         <div className="">
           <SettingsSidebar
             showSettingsMenu={showSettingsMenu}
@@ -28,14 +28,13 @@ function Layout({children}) {
                 showSettingsMenu={showSettingsMenu}
                 setShowSettingsMenu={setShowSettingsMenu}
               />
-              {children}
+              <Outlet />
             </div>
           </div>
         </div>
-      {/* ) : (
-              <Outlet />
-        {children}
-      )} */}
+      ) : (
+        <Outlet />
+      )}
     </>
   );
 }
