@@ -1,20 +1,17 @@
  
+import { useEffect } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import MenuList from "./MenuList";
 function SidebarComponent({ showMenu, setShowMenu }) { 
-
-  if (!useMediaQuery()) {
-    setShowMenu(true);
-  }
-
+ 
   return (
-    <div className={`zind20 ${useMediaQuery() ? "0" : "ml280px"}   `}>
+    <div className={`zind20 ${!useMediaQuery() ? "0" : "ml280px"}   `}>
       <div
         className={`m15 br0375rem sidebarTextColor relative fixed width250 scrollbar sidebarBackground sidebarText sidebarHeight overflowXhidden  left0 p20 ${
-          useMediaQuery() ? "left0" : ""
+          !useMediaQuery() ? "left0" : ""
         } ${showMenu ? "" : "lMinus280px"}`}
       >
-        {useMediaQuery() ? (
+        {!useMediaQuery() ? (
           <div className="clossButton positionAbsolute">
             <span
               onClick={() => setShowMenu(false)}
@@ -41,7 +38,7 @@ function SidebarComponent({ showMenu, setShowMenu }) {
         </div>
 
         <hr className="darkHr" />
-        <div className="flex  imgSection  my10">
+        <div className="flex  imgSection  alignCenter my10">
           <img
             className="br50 size40"
             src="/src/assets/img/backgrounds/avatar.png"

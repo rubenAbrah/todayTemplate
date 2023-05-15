@@ -52,6 +52,24 @@ function MenuList() {
             </li>
             <li className="flex">
               <Link
+                data-href="/dashboard2"
+                className="br0375rem p10 m5 width100 menuListItem"
+                to="/dashboard2"
+              >
+                dashboard2
+              </Link>
+            </li>
+            <li className="flex">
+              <Link
+                data-href="/profile"
+                className="br0375rem p10 m5 width100 menuListItem"
+                to="/profile"
+              >
+                ProfilePage
+              </Link>
+            </li>  
+            <li className="flex">
+              <Link
                 data-href="/login"
                 className="br0375rem p10 m5 width100 menuListItem"
                 to="/login"

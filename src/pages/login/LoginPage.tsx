@@ -1,4 +1,4 @@
-import SectionComponent from "../../components/ui/section/SectionComponent";
+import SectionComponent from "../../components/ui/sections/SectionComponent";
 import { UiButton } from "../../components/ui/button/UiButton";
 import { Checkbox } from "../../components/ui/checkbox/Checkbox";
 import { BigTitle } from "../../components/ui/title/BigTitle";
@@ -16,7 +16,7 @@ function LoginPage() {
         "alignCenter",
       ].join(" ")}
     >
-      <SectionComponent titleText="Войти">
+      <SectionComponent sectionTitle="Войти">
         <form
           action=""
           className={[

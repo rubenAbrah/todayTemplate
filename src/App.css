@@ -1,11 +1,16 @@
 .p20 {
   padding: 20px;
 }
-
+.w110ml-5 {
+  width: 110%;
+  margin-left: -5%;
+}
 .p30 {
   padding: 30px;
+} 
+.p3 {
+  padding: 3px;
 }
-
 .py10 {
   padding: 0 10px;
 }
@@ -37,10 +42,8 @@
 .mXauto {
   margin: 0 auto;
 }
-
-.myMinus25 {
-  margin-left: -10px;
-  margin-right: -10px;
+.mt40m5 {
+  margin: 40px 5px 5px;
 }
 
 .left0 {
@@ -54,7 +57,6 @@
 .px15 {
   padding: 0 15px;
 }
-
 .m5first {
   margin: 5px 5px 5px 0;
 }
@@ -66,15 +68,20 @@
 .m15 {
   margin: 15px;
 }
+.translateY30px {
+  transform: translateY(-70px);
+}
 
-.mtminus30 {
-  margin-top: -30px;
+.mtminus60 {
+  margin-top: -60px;
 }
 
 .margin0 {
   margin: 0;
 }
-
+.height150 {
+  height: 150px;
+}
 .flexEnd {
   justify-content: flex-end;
 }
@@ -101,6 +108,7 @@
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .column {
@@ -126,7 +134,10 @@
 .br075rem {
   border-radius: 0.75rem;
 }
-
+.w80h80 {
+  width: 80px;
+  height: 80px;
+}
 .size40 {
   width: 40px;
   height: 40px;
@@ -176,16 +187,8 @@
   color: #7b809a;
 }
 
-.topminus80 {
-  top: -80px;
-}
-
-.pt50mt70 {
-  padding-top: 50px;
-  margin-top: 70px;
-}
-
-.width90 {
+.w90mxauto {
+  margin: 0 auto;
   width: 90%;
 }
 
@@ -196,7 +199,9 @@
 .width340 {
   width: min(340px, calc(100vw - 30px));
 }
-
+.zind-5 {
+  z-index: -5;
+}
 .zind10 {
   z-index: 10;
 }
@@ -216,11 +221,15 @@
 .positionAbsolute {
   position: absolute;
 }
-
+.minWidth {
+  width: min-content;
+}
 .scale1_5 {
   transform: scale(1.5);
 }
-
+.mtminus90 {
+  margin-top: -90px;
+}
 .width100 {
   width: 100%;
 }
@@ -255,7 +264,7 @@
   right: 0;
 }
 
-.active a {
+.sidebarActive a {
   color: white;
 }
 
@@ -269,9 +278,7 @@
   border-radius: 5px;
 }
 
-.navHeader i,
-.header i,
-.sidebarBackground i {
+i {
   margin: 10px 10px 0 10px;
   cursor: pointer;
   font-family: FontAwesome;
@@ -307,10 +314,122 @@
 .subMenuOpen:before {
   content: "\f107";
 }
-
+.calendar::before {
+  content: "\f073";
+}
 .subMenuClose:before {
   content: "\f106";
 }
 .close::before {
   content: "\f00d";
 }
+.folder::before {
+  content: "\f07b";
+}
+.chart::before {
+  content: "\f080";
+}
+.building::before {
+  content: "\f0f7";
+}
+.col-6 {
+  width: 50%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3%;
+}
+.profileBackground {
+  background-image: url(/src/assets/img/backgrounds/sidebarImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flexMedia450 { 
+  display: flex;
+}
+
+@media screen and (max-width: 1400px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .flexMedia450 { 
+    flex-direction: column;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+.contentWrapper {
+  max-width: 1700px;
+  width: calc(100% - 280px);
+}
+@media screen and (max-width: 1100px) {
+  .contentWrapper {
+    width: 100%;
+  }
+}
+
+
+
+
+.r-all {
+  background: #F6F7F7;
+  border: solid 2px #BFE2FF;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+}
+.r-all .r-group {
+  margin: 10px;
+  width: calc(100% - 20px);
+  display: flex;
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 10px;
+  transition: background .2s ease;
+}
+.r-all .r-group input {
+  opacity: 0;
+  position: absolute;
+}
+.r-all .r-group input + label {
+  border-radius: 10px;
+  flex: 1 1 100%;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  transition: color .4s ease;
+  cursor: pointer;
+}
+.r-all::before {
+  background: #337AB7;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+  color: #FFF;
+  content: "";
+  display: block;
+  height: calc(100% - 20px);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: translateX(calc((100% + (10px * 2)) * (var(--options-active) - 1)));
+  transition: transform cubic-bezier(0.8, 0.34, 0.28, 1.15) 0.35s;
+  width: calc((100% - ((var(--options)*10px)*2)) / var(--options));
+}
+.r-all .r-group input:checked + label {
+  color: #FFF;
+}
+.r-all .r-group:hover  {
+  background: #BFE2FF;
+  border: 1px solid #BFE2FF;
+} 

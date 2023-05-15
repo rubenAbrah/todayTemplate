@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 function HeaderComponent({
-  setShowMenu,
   showMenu,
-  ShowSettingsMenu,
+  showSettingsMenu,
   setShowSettingsMenu,
   showHeader,
+  setShowMenu,
 }) {
   useEffect(() => {
     function watchScroll() {
@@ -15,7 +15,7 @@ function HeaderComponent({
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  });
+  }, []);
 
   const onScroll = (e) => {
     if (showHeader && !isSticky.includes("sticky")) {
@@ -28,24 +28,31 @@ function HeaderComponent({
 
   const [isSticky, setisSticky] = useState("");
   return (
-    <header className={`zind15 width100 br075rem py10 right0 header ${isSticky}`}>
-      <div className="flex flexEnd p30 m15">
-        <span>
-          <i className="account" aria-hidden="true"></i>
-        </span>
-        {useMediaQuery() ? (
+    <header
+      className={`zind15 width100 br075rem py10 right0 header ${isSticky}`}
+    >
+      <div className={`flex  ${useMediaQuery() ?'flexEnd' : 'between'} p30 m15`}>
+        {!useMediaQuery() ? (
           <span onClick={() => setShowMenu(!showMenu)}>
-            <i className={showMenu? 'menu-close':'menu-active' } aria-hidden="true"></i>
+            <i
+              className={showMenu ? "menu-close" : "menu-active"}
+              aria-hidden="true"
+            ></i>
           </span>
         ) : (
           ""
         )}
-        <span onClick={() => setShowSettingsMenu(!ShowSettingsMenu)}>
-          <i className="settings" aria-hidden="true"></i>
-        </span>
-        <span>
-          <i className="notification" aria-hidden="true"></i>
-        </span>
+        <div className="">
+          <span>
+            <i className="account" aria-hidden="true"></i>
+          </span>
+          <span onClick={() => setShowSettingsMenu(!showSettingsMenu)}>
+            <i className="settings" aria-hidden="true"></i>
+          </span>
+          <span>
+            <i className="notification" aria-hidden="true"></i>
+          </span>
+        </div>
       </div>
     </header>
   );

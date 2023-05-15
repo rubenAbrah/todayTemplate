@@ -35,7 +35,7 @@ function SettingsSidebar({
       <hr className="lightHr my10" />
       <div className="flex column">
         <SidebarBackgroundColor
-          BackgroundTypesMenu={["темный", "светлый"]}
+          BackgroundTypesMenu={["светлый", "темный"]}
           BackgroundTypesTitle="тип меню"
           functionChangeColor={useChangeSidebarBackgroundColor}
         />
@@ -49,7 +49,7 @@ function SettingsSidebar({
             name="setShowHeader"
             id="setShowHeader"
             type="checkbox"
-            onChange={(e) => setShowHeader(e.target.checked)}
+            onChange={(e) => setShowHeader(false)}
             className="scale1_5 checkbox"
           />
         </div>

@@ -1,7 +1,7 @@
 import { UiButton } from "../../components/ui/button/UiButton";
 import { useEffect } from "react";
 import styles from "./Wisard.module.css";
-import SectionComponent from "../../components/ui/section/SectionComponent";
+import SectionComponent from "../../components/ui/sections/SectionComponent";
 function Wisard() {
   var currentTab = 0;
   useEffect(() => {
@@ -66,7 +66,7 @@ function Wisard() {
     showTab(currentTab);
   }
   return (
-    <SectionComponent titleText="myForm">
+    <SectionComponent sectionTitle="myForm">
       <form id="regForm" className={`p30 width100 `} action="">
         <h1>Register:</h1>
         <div className={`tab ${styles.tab}`}>

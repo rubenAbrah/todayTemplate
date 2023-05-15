@@ -5,18 +5,17 @@
     rgb(26, 115, 232)
   );
   --sidebar-background-color-global: rgb(31, 40, 62);
-  --sidebar-background-color-type1: rgb(31, 40, 62);
-  --sidebar-background-color-type2: rgb(255, 255, 255);
+  --sidebar-background-color-type1:  rgb(255, 255, 255);
+  --sidebar-background-color-type2:  rgb(31, 40, 62);
   --theme-body-global: rgb(26, 32, 53);
   --theme-body-type1: rgb(240, 242, 245);
   --theme-body-type2: rgb(26, 32, 53);
   --text-color-global: rgb(255, 255, 255);
   --text-color-type1: rgb(52, 71, 103);
   --text-color-type2: rgb(255, 255, 255);
-  --sidebar-text-color-global: rgb(255, 255, 255);
-  --sidebar-text-color-type3: rgb(52, 71, 103);
-  --sidebar-text-color-type2: rgb(52, 71, 103);
-  --sidebar-text-color-type1: rgb(255, 255, 255);
+  --sidebar-text-color-global: rgb(255, 255, 255); 
+  --sidebar-text-color-type2: rgb(255, 255, 255);
+  --sidebar-text-color-type1: rgb(52, 71, 103);
   --section-background-color: rgb(32, 41, 64);
   --section-background-type1: rgb(255, 255, 255);
   --section-background-type2: rgb(32, 41, 64);
@@ -121,6 +120,19 @@ body {
   background: var(--theme-body-global);
 }
 
+ 
+svg text{ 
+  fill: #ffffff !important;
+}
+.dxc-legend{
+  display: none;
+}
+#chart{
+  width: min-content;
+}
+#chart svg{
+  height: 170px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -218,9 +230,7 @@ h6 {
 .colorLight {
   color: rgb(255, 255, 255);
 }
-.contentWrapper {
-  max-width: 1700px; 
-} 
+ 
 .menuListItem.active{
   color: #ffffff;
 }

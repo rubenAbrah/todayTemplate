@@ -1,7 +1,7 @@
 import Form, { Item, GroupItem, Label } from "devextreme-react/form";
 import LabelNotesTemplate from "../../LabelNotesTemplate";
 import { employee, positions } from "../../data";
-import SectionComponent from "../../components/ui/section/SectionComponent";
+import SectionComponent from "../../components/ui/sections/SectionComponent";
 import { useCallback } from 'react';
 
 
@@ -41,7 +41,7 @@ function DashboardPage() {
   return (
     <>
 
-      <SectionComponent titleText={'title'}>
+      <SectionComponent sectionTitle={'title'}>
         <div className="dx-viewport">
           <Form onContentReady={validateForm} formData={employee}>
             <GroupItem colCount={2} caption="Employee Details">
