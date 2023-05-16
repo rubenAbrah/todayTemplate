@@ -1,0 +1,42 @@
+
+@media screen and (max-width: 1100px) {
+    .contentWrapper {
+      width: 100%;
+    }
+  }
+  
+  .radio-1:checked~.glider {
+    transform: translateX(0);
+  }
+  
+  .radio-2:checked~.glider {
+    transform: translateX(100%);
+  }
+  
+  .radio-3:checked~.glider {
+    transform: translateX(200%);
+  }
+  
+  @media screen and (max-width: 900px) {
+    .radio-1:checked~.glider {
+      transform: translateY(0);
+    }
+  
+    .radio-2:checked~.glider {
+      transform: translateY(100%);
+    }
+  
+    .radio-3:checked~.glider {
+      transform: translateY(200%);
+    }
+  }
+  
+  .glider {
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width: 32%;
+    background-color: var(--section-background-color);
+    z-index: 1;
+    transition: 0.25s ease-out;
+  }
