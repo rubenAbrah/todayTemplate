@@ -41,15 +41,16 @@ function SettingsSidebar({
         />
         <hr className="lightHr my10" />
 
+
         <div className="flex between">
           <label htmlFor="setShowHeader">
             <h6>прикрепить шапку сверху</h6>
           </label>
-          <input
-            name="setShowHeader"
-            id="setShowHeader"
+          <input 
             type="checkbox"
-            onChange={(e) => setShowHeader(false)}
+            onChange={(e) => {
+              setShowHeader(e.target.checked);
+            }}
             className="scale1_5 checkbox"
           />
         </div>

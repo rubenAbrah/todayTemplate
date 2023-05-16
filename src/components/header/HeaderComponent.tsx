@@ -31,7 +31,9 @@ function HeaderComponent({
     <header
       className={`zind15 width100 br075rem py10 right0 header ${isSticky}`}
     >
-      <div className={`flex  ${useMediaQuery() ?'flexEnd' : 'between'} p30 m15`}>
+      <div
+        className={`flex  ${useMediaQuery() ? "flexEnd" : "between"} p30 m15`}
+      >
         {!useMediaQuery() ? (
           <span onClick={() => setShowMenu(!showMenu)}>
             <i

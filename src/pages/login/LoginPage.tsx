@@ -1,35 +1,15 @@
 import SectionComponent from "../../components/ui/sections/SectionComponent";
 import { UiButton } from "../../components/ui/button/UiButton";
-import { Checkbox } from "../../components/ui/checkbox/Checkbox";
-import { BigTitle } from "../../components/ui/title/BigTitle";
+import { CastomCheckbos } from "../../components/ui/checkbox/Checkbox"; 
 import styles from "./Login.module.css";
 function LoginPage() {
   return (
-    <div
-      className={[
-        styles.wrapper,
-        "colorGrey",
-        "justifyCenter",
-        "br075rem",
-        "flex",
-        "column",
-        "alignCenter",
-      ].join(" ")}
+    <div className={`${styles.wrapper} colorGrey justifyCenter br075rem flex column alignCenter `}
     >
-      <SectionComponent sectionTitle="Войти">
+      <SectionComponent sectionTitle="Вход">
         <form
           action=""
-          className={[
-            "br075rem",
-            "p25",
-            "pt75",
-            "title",
-            "bgWhite",
-            "width100",
-            "flex",
-            "column",
-            "loginformWrapper",
-          ].join(" ")}
+          className={`br075rem p25 pt75 title bgWhite width100 flex column loginformWrapper `}
         >
           <input
             type="text"
@@ -43,11 +23,7 @@ function LoginPage() {
             placeholder="Пароль"
             id=""
           />
-          {/* <Checkbox>321 </Checkbox>*/}
-          <div className="flex">
-            <input type="checkbox" name="remember" id="remember" className="scale1_5"/>
-            <label htmlFor="remember" className="px15">Запомнить</label>
-          </div>
+          <CastomCheckbos>Запомнить </CastomCheckbos> 
           <UiButton>Войти</UiButton>
           <span className="my5">
             Забыли пароль ?{" "}

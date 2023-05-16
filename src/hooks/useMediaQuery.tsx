@@ -1,18 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 
 function useMediaQuery() {
-  const query = 1100;
-  const mediaQuery = useMemo(() => window.innerWidth, [query]);
-  const [match, setMatch] = useState(mediaQuery > query);
+  const query = 1100; 
+  const [match, setMatch] = useState(window.innerWidth > query);
 
   useEffect(() => {
     function onChange() { 
-        setMatch(mediaQuery > query); 
+        setMatch(window.innerWidth > query); 
     }
     window.addEventListener("resize", onChange); 
 
     return () => window.removeEventListener("resize", onChange);
-  }, [mediaQuery]);
+  }, []);
 
   return match;
 }

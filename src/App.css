@@ -17,8 +17,7 @@
 
 .py10 {
   padding: 0 10px;
-}
-
+} 
 .my10 {
   margin: 10px 0;
 }
@@ -26,7 +25,9 @@
 .my20 {
   margin: 20px 0;
 }
-
+.ml15px{
+  margin-left: 15px;
+}
 .pt75 {
   padding-top: 75px;
 }
@@ -74,13 +75,17 @@
 .m15 {
   margin: 15px;
 }
-
+.flex .mt85m5{
+  margin: 85px 5px 5px;
+}
 .translateY30px {
   transform: translateY(-70px);
 }
-
-.mtminus60 {
-  margin-top: -60px;
+.flex .mtminus100{
+  margin-top: -100px;
+}
+.mtminus40 {
+  margin-top: -40px;
 }
 
 .margin0 {
@@ -308,8 +313,7 @@ i {
 
 .sidebarBackground i {
   font-size: 25px;
-}
-
+} 
 .navHeader i,
 .header i {
   font-size: 35px;
@@ -405,4 +409,8 @@ i {
   max-width: 1700px;
   width: calc(100% - 280px);
 }
- 
+@media screen and (max-width: 1100px) {
+  .contentWrapper {
+    width: 100%;
+  }
+}
