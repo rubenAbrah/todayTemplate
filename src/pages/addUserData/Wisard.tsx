@@ -1,7 +1,7 @@
-import { UiButton } from "../../components/ui/button/UiButton";
+import { UiButton } from "/@/components/ui/button/UiButton";
 import { useEffect } from "react";
 import styles from "./Wisard.module.css";
-import SectionComponent from "../../components/ui/sections/SectionComponent";
+import SectionComponent from "/@/components/ui/sections/SectionComponent";
 function Wisard() {
   var currentTab = 0;
   useEffect(() => {

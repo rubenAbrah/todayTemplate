@@ -1,7 +1,7 @@
 import Form, { Item, GroupItem, Label } from "devextreme-react/form";
-import LabelNotesTemplate from "../../LabelNotesTemplate";
-import { employee, positions } from "../../data/chratData";
-import SectionComponent from "../../components/ui/sections/SectionComponent";
+import LabelNotesTemplate from "./LabelNotesTemplate";
+import { employee, positions } from "/@/data/chratData";
+import SectionComponent from "/@/components/ui/sections/SectionComponent";
 import { useCallback } from 'react';
 
 

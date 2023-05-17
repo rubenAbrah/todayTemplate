@@ -1,4 +1,4 @@
-import { useChangeSidebarBackgroundColor } from "../../hooks/useChangeTeamColor";
+import { useChangeSidebarBackgroundColor } from "/@/hooks/useChangeTeamColor";
 import { BlackButton } from "../ui/button/UiButton";
 
 function SidebarBackgroundColor({ BackgroundTypesMenu, BackgroundTypesTitle,functionChangeColor }) {

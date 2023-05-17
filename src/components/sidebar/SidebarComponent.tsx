@@ -1,6 +1,6 @@
  
 import { useEffect } from "react";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import useMediaQuery from "/@/hooks/useMediaQuery";
 import MenuList from "./MenuList";
 function SidebarComponent({ showMenu, setShowMenu }) { 
  

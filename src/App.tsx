@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import Layout from "./components/Layout";
-import Wisard from "./pages/addUserData/Wisard";
-import DashboardPage from "./pages/dashboard/DashboardPage";
-import LoginPage from "./pages/login/LoginPage";
-import MinSectionsDashboard from "./pages/minSectiosDahboard.tsx/MinSectionsDashboard"; 
-import ProfilePage from "./pages/profile/ProfilePage";
+import Layout from "/@/components/Layout";
+import Wisard from "/@/pages/addUserData/Wisard";
+import DashboardPage from "/@/pages/dashboard/DashboardPage";
+import LoginPage from "/@/pages/login/LoginPage";
+import MinSectionsDashboard from "/@/pages/minSectiosDahboard.tsx/MinSectionsDashboard"; 
+import ProfilePage from "/@/pages/profile/ProfilePage";
 export default function App() {
   return (
     <BrowserRouter>

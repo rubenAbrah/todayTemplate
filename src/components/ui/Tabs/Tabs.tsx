@@ -1,5 +1,5 @@
 import { RadioButton } from "../radioButton/RadioButton";
-import tabsData from "../../../data/tabsData";
+import tabsData from "/@/data/tabsData";
 
 import "./Tabs.css";
 

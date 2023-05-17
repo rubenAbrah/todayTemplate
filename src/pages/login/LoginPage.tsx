@@ -1,6 +1,6 @@
-import SectionComponent from "../../components/ui/sections/SectionComponent";
-import { UiButton } from "../../components/ui/button/UiButton";
-import { CastomCheckbos } from "../../components/ui/checkbox/Checkbox"; 
+import SectionComponent from "/@/components/ui/sections/SectionComponent";
+import { UiButton } from "/@/components/ui/button/UiButton";
+import { CastomCheckbos } from "/@/components/ui/checkbox/Checkbox"; 
 import styles from "./Login.module.css";
 function LoginPage() {
   return (

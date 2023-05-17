@@ -1,10 +1,10 @@
-import { RadioButton } from "../../components/ui/radioButton/RadioButton";
-import SectionComponent from "./../../components/ui/sections/SectionComponent"; 
+import { RadioButton } from "/@/components/ui/radioButton/RadioButton";
+import SectionComponent from "/@/components/ui/sections/SectionComponent"; 
 import {   useRef, useState } from "react"; 
-import { CastomCheckbos } from "../../components/ui/checkbox/Checkbox";
-import tabsData from '../../data/tabsData'  
-import Tabs from "../../components/ui/Tabs/Tabs";
-import App from "../../components/pivotGrid/PivotGrid";
+import { CastomCheckbos } from "/@/components/ui/checkbox/Checkbox";
+import tabsData from '/@/data/tabsData'  
+import Tabs from "/@/components/ui/Tabs/Tabs";
+import App from "/@/components/pivotGrid/PivotGrid";
 
  
 const ProfilePage = () => {

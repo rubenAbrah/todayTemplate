@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import {
   useChangeSidebarBackgroundColor,
   useChangeTeam,
-} from "../../hooks/useChangeTeamColor";
+} from "/@/hooks/useChangeTeamColor";
 import SidebarTitleColor from "./SidebarTitleColor";
 import SidebarBackgroundColor from "./SidebarBackgroundColor";
 function SettingsSidebar({

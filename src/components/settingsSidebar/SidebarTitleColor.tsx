@@ -1,4 +1,4 @@
-import { useChangeTitleColor } from "../../hooks/useChangeTeamColor";
+import { useChangeTitleColor } from "/@/hooks/useChangeTeamColor";
 
  
 const numbers = [1, 2, 3, 4, 5, 6];

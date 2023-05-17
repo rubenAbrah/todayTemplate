@@ -1,5 +1,5 @@
-import ChartComponent from "../../components/chart/ChartComponent";
-import SectionComponent from "./../../components/ui/sections/SectionComponent";
+import ChartComponent from "/@/components/chart/ChartComponent";
+import SectionComponent from "/@/components/ui/sections/SectionComponent";
 function MinSectionsDashboard() {
   return (
     <>

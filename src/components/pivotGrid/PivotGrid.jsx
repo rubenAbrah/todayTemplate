@@ -11,7 +11,7 @@ import Chart, {
 
 import PivotGrid, { FieldChooser } from "devextreme-react/pivot-grid";
 
-import { sales } from "../../data/PivotGrid";
+import { sales } from "/@/data/PivotGrid";
 function App() {  
   let _chart = useRef(null),  
     _pivotGrid = useRef(null);  
