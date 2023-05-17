@@ -1,15 +1,15 @@
-import { RadioButton } from "/@/components/ui/radioButton/RadioButton";
-import SectionComponent from "/@/components/ui/sections/SectionComponent"; 
-import {   useRef, useState } from "react"; 
-import { CastomCheckbos } from "/@/components/ui/checkbox/Checkbox";
-import tabsData from '/@/data/tabsData'  
+import { RadioButton } from "../../components/ui/radioButton/RadioButton";
+import SectionComponent from "./../../components/ui/sections/SectionComponent";
+import { useEffect, useState } from "react";
+import { CastomCheckbos } from "../../components/ui/checkbox/Checkbox";
+import tabsData from "../../data/tabsData";
 import Tabs from "/@/components/ui/Tabs/Tabs";
-import App from "/@/components/pivotGrid/PivotGrid";
+import App from "/@/components/pivotGrid/PivotGrid"; 
+import GanttComponent from "/@/components/gant/GanttComponent";
 
- 
 const ProfilePage = () => {
-
   const [activeTab, setActiveTab] = useState(tabsData[0]);
+ 
   return (
     <>
       <div className="felx w90mxauto">
@@ -35,15 +35,14 @@ const ProfilePage = () => {
             <Tabs setActiveTab={setActiveTab} />
           </div>
           <div className="">{activeTab.content}</div>
-        {/* <CastomCheckbos id='id'>
+          {/* <CastomCheckbos id='id'>
           321
         </CastomCheckbos>  */}
-
         </SectionComponent>
-       
+
         <SectionComponent>
-        <App/>
-     
+          {/* <App />*/}
+          <GanttComponent/> 
         </SectionComponent>
       </div>
     </>

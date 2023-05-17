@@ -1,11 +1,10 @@
-import SectionComponent from "/@/components/ui/sections/SectionComponent";
-import { UiButton } from "/@/components/ui/button/UiButton";
-import { CastomCheckbos } from "/@/components/ui/checkbox/Checkbox"; 
+import SectionComponent from "../../ui/sections/SectionComponent";
+import { UiButton } from "../../ui/button/UiButton";
+import { CastomCheckbos } from "../../ui/checkbox/Checkbox"; 
 import styles from "./Login.module.css";
 function LoginPage() {
   return (
-    <div className={`${styles.wrapper} colorGrey justifyCenter br075rem flex column alignCenter `}
-    >
+     
       <SectionComponent sectionTitle="Вход">
         <form
           action=""
@@ -38,8 +37,7 @@ function LoginPage() {
             </a>
           </span>
         </form>
-      </SectionComponent>
-    </div>
+      </SectionComponent> 
   );
 }
 export default LoginPage;

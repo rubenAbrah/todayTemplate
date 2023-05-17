@@ -44,7 +44,7 @@ function SidebarComponent({ showMenu, setShowMenu }) {
             src="/src/assets/img/backgrounds/avatar.png"
             alt=""
           />
-          <span className="m15">423</span>
+          <span className="m15">Richard Davis</span>
         </div>
         <hr className="darkHr" />
         <MenuList/>
