@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import styles from "./Wave.module.css";
 
 function wave(e) {

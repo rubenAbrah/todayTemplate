@@ -2,9 +2,8 @@ import Form, { Item, GroupItem, Label } from "devextreme-react/form";
 import LabelNotesTemplate from "./LabelNotesTemplate";
 import { employee, positions } from "/@/data/chratData";
 import SectionComponent from "/@/components/ui/sections/SectionComponent";
-import { useCallback } from 'react';
-
-
+import { useCallback } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const validationRules = {
   position: [{ type: "required", message: "Position is required." }],
@@ -25,7 +24,7 @@ const phoneEditorOptions = {
   maskRules: { X: /[02-9]/ },
 };
 function DashboardPage() {
-  const validateForm =  useCallback((e) => {
+  const validateForm = useCallback((e) => {
     e.component.validate();
   }, []);
   function LabelTemplate(iconName) {
@@ -40,9 +39,8 @@ function DashboardPage() {
   }
   return (
     <>
-
-      <SectionComponent sectionTitle={'title'}>
-        <div className="dx-viewport">
+      <SectionComponent sectionTitle={"title"}>
+        {/* <div className="dx-viewport">
           <Form onContentReady={validateForm} formData={employee}>
             <GroupItem colCount={2} caption="Employee Details">
               <Item dataField="FirstName" editorOptions={nameEditorOptions}>
@@ -93,8 +91,27 @@ function DashboardPage() {
               </Item>
             </GroupItem>
           </Form>
+        </div> */}
+        <div className="">
         </div>
+        <Outlet />
       </SectionComponent>
+      <Link
+                data-href="/blogs"
+                className="br0375rem p10 m5 width100 menuListItem"
+                to="/blogs/blog"
+                >
+                ssssss
+                Blogsblog
+              </Link> 
+              <Link
+                data-href="/blogs/blog"
+                className="br0375rem p10 m5 width100 menuListItem"
+                to="/blogs/"
+                >
+                ssssss
+                Blogsblog
+              </Link> 
     </>
   );
 }

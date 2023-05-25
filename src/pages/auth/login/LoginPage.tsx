@@ -1,14 +1,13 @@
-import SectionComponent from "../../ui/sections/SectionComponent";
-import { UiButton } from "../../ui/button/UiButton";
-import { CastomCheckbos } from "../../ui/checkbox/Checkbox"; 
-import styles from "./Login.module.css";
+import SectionComponent from "/@/components/ui/sections/SectionComponent";
+import { UiButton } from "/@/components/ui/button/UiButton";
+import { CastomCheckbos } from "/@/components/ui/checkbox/Checkbox";  
 function LoginPage() {
   return (
      
       <SectionComponent sectionTitle="Вход">
         <form
           action=""
-          className={`br075rem p25 pt75 title bgWhite width100 flex column loginformWrapper `}
+          className={`br075rem p25 pt75 bgWhite width100 flex column loginformWrapper `}
         >
           <input
             type="text"
@@ -26,13 +25,13 @@ function LoginPage() {
           <UiButton>Войти</UiButton>
           <span className="my5">
             Забыли пароль ?{" "}
-            <a className="colorBlue" href="">
+            <a className="colorBlue" href="resetPassword">
               Восстоновить
             </a>
           </span>
           <span className="my5">
             Не имеете аккаунта ?{" "}
-            <a className="colorBlue" href="">
+            <a className="colorBlue" href="/registration">
               Регистрация
             </a>
           </span>

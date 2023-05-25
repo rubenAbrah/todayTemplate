@@ -6,7 +6,7 @@ import tabsData from "../../data/tabsData";
 import Tabs from "/@/components/ui/Tabs/Tabs";
 import App from "/@/components/pivotGrid/PivotGrid"; 
 import GanttComponent from "/@/components/gant/GanttComponent";
-
+import PivotGridComponent from '../../components/pivotGrid/PivotGrid'
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState(tabsData[0]);
  
@@ -15,7 +15,7 @@ const ProfilePage = () => {
       <div className="felx w90mxauto">
         <SectionComponent
           sectionClassName={"mt85m5"}
-          sectionTitle={" "}
+          sectionTitle={"   "}
           titleStylesClassname={
             "w110ml-5 profileBackground height150 relative mtminus100 zind-5"
           }
@@ -34,6 +34,8 @@ const ProfilePage = () => {
             </div>
             <Tabs setActiveTab={setActiveTab} />
           </div>
+
+          
           <div className="">{activeTab.content}</div>
           {/* <CastomCheckbos id='id'>
           321
@@ -44,6 +46,7 @@ const ProfilePage = () => {
           {/* <App />*/}
           <GanttComponent/> 
         </SectionComponent>
+        <PivotGridComponent/>
       </div>
     </>
   );

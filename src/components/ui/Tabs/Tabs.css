@@ -1,13 +1,17 @@
-.radio-1:checked ~ .glider {
+.radio-1:checked~.glider {
   transform: translateX(0);
 }
 
-.radio-2:checked ~ .glider {
+.radio-2:checked~.glider {
   transform: translateX(100%);
 }
 
-.radio-3:checked ~ .glider {
+.radio-3:checked~.glider {
   transform: translateX(200%);
+}.radio-4:checked~.glider {
+  transform: translateX(300%);
+}.radio-5:checked~.glider {
+  transform: translateX(400%);
 }
 
 .glider {
@@ -21,18 +25,27 @@
 }
 
 @media screen and (max-width: 900px) {
-  .radio-1:checked ~ .glider {
+  .radio-1:checked~.glider {
     transform: translateY(0);
   }
 
-  .radio-2:checked ~ .glider {
+  .radio-2:checked~.glider {
     transform: translateY(100%);
   }
 
-  .radio-3:checked ~ .glider {
+  .radio-3:checked~.glider {
     transform: translateY(200%);
   }
+
+  .radio-4:checked~.glider {
+    transform: translateY(300%);
+  }
+
+  .radio-5:checked~.glider {
+    transform: translateY(400%);
+  }
+
   .glider {
-    width: calc(100% - 20px);
+    width: calc(100% - 2rem);
   }
 }

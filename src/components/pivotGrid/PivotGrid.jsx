@@ -12,7 +12,7 @@ import Chart, {
 import PivotGrid, { FieldChooser } from "devextreme-react/pivot-grid";
 
 import { sales } from "/@/data/PivotGrid";
-function App() {  
+function PivotGridComponent() {  
   let _chart = useRef(null),  
     _pivotGrid = useRef(null);  
   useEffect(() => {  
@@ -104,4 +104,4 @@ function customizeTooltip(args) {
   };
 }
 
-export default App;
+export default PivotGridComponent;

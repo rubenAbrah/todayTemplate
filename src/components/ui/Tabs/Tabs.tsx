@@ -9,7 +9,8 @@ function Tabs({ setActiveTab }) {
   return (
     <div
       className="flex my20 alignCenter justifyCenter"
-      onChange={(e) => setActiveTab(tabsData[e.target.id])}
+      onChange={(e) => {setActiveTab(tabsData[e.target.id])
+      }}
     >
       <div className={`relative flexMedia500 p10 br075rem ${styles.tabs}`}>
         {tabsData.map((tab, i) => (

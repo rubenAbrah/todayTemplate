@@ -3,28 +3,17 @@ function useChangeTitleColor(e) {
 }
 
 function useChangeSidebarBackgroundColor(e) {
-  let type = e.target.getAttribute("data-color");
-  helper(
-    "--sidebar-background-color-global",
-    `--sidebar-background-color-${type}`
-  );
-  helper("--sidebar-text-color-global", `--sidebar-text-color-${type}`);
+  e.target.getAttribute("data-color") == 'type2' ?
+  document.querySelector('body').setAttribute('data-menuTheme','dark')
+  :
+  document.querySelector('body').removeAttribute('data-menuTheme')
+  
 }
 function useChangeTeam(e) {
-  let type = e.target.getAttribute("data-color");
-  helper("--theme-body-global", `--theme-body-${type}`);
-  helper("--text-color-global", `--text-color-${type}`);
-  helper("--section-background-color", `--section-background-${type}`);
-  helper(
-    "--header-background-color-global",
-    `--header-background-color-${type}`
-  );
-}
-function helper(globalColor, newColor, colorParent = document.body) {
-  document.documentElement.style.setProperty(
-    globalColor,
-    getComputedStyle(colorParent).getPropertyValue(newColor)
-  );
-}
+  e.target.getAttribute("data-color") == 'type2' ?
+  document.querySelector('body').setAttribute('data-theme','dark')
+  :
+  document.querySelector('body').removeAttribute('data-theme') 
+} 
 
 export { useChangeTitleColor, useChangeSidebarBackgroundColor, useChangeTeam };

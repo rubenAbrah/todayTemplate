@@ -45,8 +45,8 @@ function HeaderComponent({
           ""
         )}
         <div className="">
-          <span>
-            <i className="account" aria-hidden="true"></i>
+          <span><i
+             className="account" aria-hidden="true"></i>
           </span>
           <span onClick={() => setShowSettingsMenu(!showSettingsMenu)}>
             <i className="settings" aria-hidden="true"></i>

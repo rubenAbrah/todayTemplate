@@ -9,7 +9,7 @@ function SidebarComponent({ showMenu, setShowMenu }) {
       <div
         className={`m15 br0375rem sidebarTextColor relative fixed width250 scrollbar sidebarBackground sidebarText sidebarHeight overflowXhidden  left0 p20 ${
           !useMediaQuery() ? "left0" : ""
-        } ${showMenu ? "" : "lMinus280px"}`}
+        } ${!showMenu   ? "lMinus280px": ''}`}
       >
         {!useMediaQuery() ? (
           <div className="clossButton positionAbsolute">

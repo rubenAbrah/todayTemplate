@@ -19,14 +19,14 @@ function Layout() {
     locale('ru');
   });
   return (
-    <div className="flex  ">
+    <div className="flex">
       <SettingsSidebar
         showSettingsMenu={showSettingsMenu}
         setShowSettingsMenu={setShowSettingsMenu}
         setShowHeader={setShowHeader}
       />
       <SidebarComponent showMenu={showMenu} setShowMenu={setShowMenu} />
-      <div className="contentWrapper mXauto px15">
+      <div className="contentWrapper  px15">
         <HeaderComponent
           showHeader={showHeader}
           showMenu={showMenu}

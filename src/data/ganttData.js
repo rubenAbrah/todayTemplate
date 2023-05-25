@@ -17,7 +17,7 @@ export const tasks = [{
     parentId: 2,
     title: 'Новый',
     start: new Date('2019-02-21T05:00:00.000Z'),
-    end: new Date('2019-02-21T09:00:00.000Z'),
+    end: new Date('2019-02-31T09:00:00.000Z'),
     progress: 100,
   }, {
     id: 4,
@@ -87,7 +87,7 @@ export const tasks = [{
     parentId: 8,
     title: 'Склад РФ Уссурийск',
     start: new Date('2019-03-13T05:00:00.000Z'),
-    end: new Date('2019-03-18T09:00:00.000Z'),
+    end: new Date('2019-03-13T05:00:00.000Z'),
     progress: 70,
   } 
 ]

@@ -1,5 +1,4 @@
-import { useChangeSidebarBackgroundColor } from "/@/hooks/useChangeTeamColor";
-import { BlackButton } from "../ui/button/UiButton";
+ import { BlackButton } from "../ui/button/UiButton";
 
 function SidebarBackgroundColor({ BackgroundTypesMenu, BackgroundTypesTitle,functionChangeColor }) {
   const listItems = BackgroundTypesMenu.map((type, i) => (
